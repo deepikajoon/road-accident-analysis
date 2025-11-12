@@ -1,105 +1,103 @@
-# road-accident-analysis
-🚗 Road Accident Analysis using Data Mining Techniques
-📘 Project Overview
+# 🚗 Road Accident Analysis using Data Mining Techniques
 
-This project focuses on analyzing road accident data using various data mining techniques to uncover patterns, detect anomalies, and predict accident severity.
-The study is based on the US Accidents (2016–2023) dataset, which contains detailed information about road accidents across the United States, including time, location, weather, and severity.
+### 📘 Course:
+**B.Sc. (Hons.) Computer Science – Data Mining II Project**
 
-The main goal is to help authorities, policy makers, and the community understand accident trends and improve road safety through data-driven insights.
+### 👩‍💻 Student:
+**Deepika**
 
-🎯 Aim
+---
 
-To apply multiple data mining techniques — including clustering, anomaly detection, ensemble classification, and stream mining — on the US Accidents dataset to identify accident hotspots, unusual patterns, and predict accident severity.
+## 🎯 Project Aim
+The aim of this project is to analyze and predict **road accident patterns** using multiple **data mining techniques**, helping the community and authorities identify **high-risk accident conditions** and **improve road safety**.
 
-📊 Dataset Information
+---
 
-Dataset Name: US Accidents (2016–2023)
+## 🧩 Dataset
+**Source:** [Traffic Accidents Dataset - Kaggle](https://www.kaggle.com/datasets/oktayrdeki/traffic-accidents)
 
-Source: Kaggle
-Size: ~3 million records
-Features:
+**File Used:** `traffic_accidents.csv`
 
-Start_Time, End_Time → Timestamp of accident
+**Total Records:** ~370,000  
+**Columns Include:** Date, Weather Condition, Lighting Condition, Road Surface, Injury Type, etc.
 
-Severity → Level of accident severity (1–4)
+---
 
-Latitude, Longitude → Accident location
+## ⚙️ Techniques Applied
 
-Weather_Condition, Temperature(F), Humidity(%) → Environmental conditions
+| Unit | Concept | Techniques Used |
+|------|----------|----------------|
+| Unit 1 | **Clustering** | K-Means, DBSCAN, Hierarchical Clustering |
+| Unit 2 | **Ensemble Methods** | Decision Tree, Bagging, AdaBoost, Random Forest |
+| Unit 3 | **Anomaly Detection** | Z-Score, Isolation Forest, Cluster-based Outlier Detection |
+| Unit 4 | **Text Mining (N/A)** | — |
+| Unit 5 | **Stream Mining** | MiniBatchKMeans (CluStream Simulation), Decay Function, Moving Window Analysis |
 
-Distance(mi) → Distance affected by the accident
+---
 
-and more...
+## 🧠 Tools & Libraries
+- **Language:** Python  
+- **Environment:** Google Colab  
+- **Libraries:** pandas, numpy, matplotlib, seaborn, scikit-learn, scipy  
 
-🧠 Techniques Applied
+---
 
-Clustering
+## 📊 Summary of Findings
 
-Algorithms: K-Means, Hierarchical Clustering, DBSCAN
+### 🔹 Clustering:
+- K-Means formed meaningful groups of accidents based on severity and time.
+- Hierarchical clusters confirmed K-Means findings.
+- DBSCAN identified rare, isolated accident cases.
 
-Purpose: Identify accident-prone zones (hotspots) based on location and conditions.
+### 🔹 Anomaly Detection:
+- Statistical (Z-Score) and Isolation Forest methods revealed outliers — potential rare, high-severity accidents.
 
-Anomaly Detection
+### 🔹 Stream Mining:
+- Time series trend analysis showed temporal accident patterns.
+- MiniBatchKMeans simulated streaming data clustering.
+- Decay function emphasized recent accident influence.
 
-Algorithms: Z-Score, IQR, Isolation Forest, Local Outlier Factor (LOF)
+### 🔹 Ensemble Learning:
+| Model | Accuracy (approx.) |
+|--------|--------------------|
+| Decision Tree | ~75% |
+| Bagging | ~80% |
+| AdaBoost | ~82% |
+| Random Forest | **~85% (Best)** |
 
-Purpose: Detect rare or unusual accident cases with abnormal conditions.
+---
 
-Ensemble Classification
+## 📁 Repository Structure
+📂 Road_Accident_Analysis
+│
+├── traffic_accidents.csv # Original Dataset
+├── traffic_accidents_processed.csv # Cleaned & Preprocessed Data
+├── traffic_accidents_final.csv # Final dataset with results
+├── Traffic_Accident_Analysis.ipynb # Complete Colab Notebook (All in One)
+└── README.md # Project Documentation
 
-Algorithms: Random Forest, Gradient Boosting, XGBoost
+---
 
-Purpose: Predict accident severity using road, weather, and time features.
+## 🚀 How to Run
 
-Stream Mining (Incremental Learning)
+1. Open **Google Colab**
+2. Upload the notebook: `Traffic_Accident_Analysis.ipynb`
+3. Upload the dataset: `traffic_accidents.csv`
+4. Run all cells sequentially.
+5. View results and exported processed files at the end.
 
-Algorithms: Hoeffding Tree, Online Naïve Bayes
+---
 
-Purpose: Simulate real-time accident data flow and model adaptation.
+## 💡 Project Outcome
 
-(Optional) Text Mining
+> This project successfully demonstrates how multiple data mining methods can be integrated to extract insights from real-world data.
+> The approach helps in **predicting accident severity**, **detecting anomalies**, and **tracking time-based trends**, all of which contribute toward **enhancing road safety awareness and prevention systems.**
 
-Analyze accident descriptions for insights using TF-IDF and NLP preprocessing.
+---
 
-🛠️ Tools and Libraries
+## 👩‍💻 Author
+**Deepika**  
+B.Sc. (Hons.) Computer Science  
+University of Delhi
 
-Python 3.10+
 
-Google Colab / Jupyter Notebook
-
-Libraries:
-pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost, folium, scikit-multiflow
-
-🧩 Project Workflow
-
-Data Preprocessing → Cleaning, handling missing values, feature encoding.
-
-Exploratory Data Analysis (EDA) → Visualizations of time, weather, and location trends.
-
-Clustering → Identify hotspots using geospatial clustering.
-
-Anomaly Detection → Detect rare or severe accident conditions.
-
-Classification → Predict severity using ensemble models.
-
-Stream Mining Simulation → Incrementally learn from accident data streams.
-
-Evaluation & Visualization → Metrics, confusion matrix, cluster maps, charts.
-
-📈 Expected Outcomes
-
-Identification of high-risk accident zones.
-
-Discovery of abnormal accident patterns.
-
-Predictive model to estimate accident severity.
-
-Real-time analysis potential for traffic monitoring systems.
-
-✍️ Author
-
-Name: Deepika
-Course: B.Sc. (Hons) Computer Science
-Subject: Data Mining - II
-Institution: Delhi University
-Semester: V
